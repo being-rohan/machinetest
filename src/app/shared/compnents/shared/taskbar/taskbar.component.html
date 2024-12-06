@@ -1,0 +1,6 @@
+<div class="taskbar" [ngClass]="{ 'taskbar-visible': dialogs.length > 0, 'taskbar-empty': dialogs.length === 0 }">
+    <button *ngFor="let dialog of dialogs" mat-raised-button (click)="reopenDialog(dialog)">
+      <mat-icon>replay</mat-icon> {{ dialog.title }}
+    </button>
+  </div>
+  

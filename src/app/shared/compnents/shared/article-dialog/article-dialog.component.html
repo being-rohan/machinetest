@@ -1,0 +1,23 @@
+<h2 mat-dialog-title>Add/Edit Article</h2>
+
+<mat-dialog-content>
+  <form [formGroup]="articleForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Title</mat-label>
+      <input matInput formControlName="title" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Body</mat-label>
+      <textarea matInput formControlName="body" rows="5"></textarea>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-raised-button color="primary" (click)="save()">Save</button>
+</mat-dialog-actions>
+
+
+

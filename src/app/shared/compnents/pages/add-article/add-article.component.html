@@ -1,0 +1,15 @@
+<div class="article-list-container">
+    <button mat-raised-button (click)="openArticleDialog()">Add Article</button>
+    <mat-form-field>
+      <input matInput placeholder="Search" [(ngModel)]="searchQuery">
+    </mat-form-field>
+    <mat-list>
+      <mat-list-item *ngFor="let article of filteredArticles()">
+        <span>{{ article.title }}</span>
+        <button mat-icon-button (click)="openArticleDialog(article)">
+          <mat-icon>edit</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </div>
+  

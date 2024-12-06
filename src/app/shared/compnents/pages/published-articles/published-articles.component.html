@@ -1,0 +1,30 @@
+<div class="container">
+    <h1>Published Articles</h1>
+  
+    <!-- Search Bar -->
+    <mat-form-field appearance="fill" class="search-box">
+      <mat-label>Search Published Articles</mat-label>
+      <input matInput [(ngModel)]="searchTerm" placeholder="Search..." />
+    </mat-form-field>
+  
+    <!-- Articles List -->
+    <mat-list>
+      <mat-list-item *ngFor="let article of filteredArticles">
+        <div class="article-card">
+      <div>
+        <h2 class="mb-4">{{ article.title }}</h2>
+      </div>
+         
+         <div>
+        
+
+         </div>
+        </div>
+        <button class="mt-4" mat-button (click)="viewArticle(article)">View Details</button>
+      </mat-list-item>
+    </mat-list>
+    <mat-list *ngIf="filteredArticles.length === 0">
+        <mat-list-item class="empty-state">No articles found.</mat-list-item>
+      </mat-list>
+  </div>
+  

@@ -1,0 +1,18 @@
+<div class="custom-dialog" [ngClass]="{'fullscreen': isFullscreen}">
+  <div class="dialog-header">
+    <span>Dialog Title</span>
+    <div class="dialog-actions">
+      <button class="minimize-btn" (click)="minimize()">_</button>
+      <button class="maximize-btn" (click)="maximize()">🔲</button>
+      <button class="close-btn" (click)="close()">✖</button>
+    </div>
+  </div>
+  <div class="dialog-body">
+    <!-- Dialog content goes here -->
+    <p>Here is the dialog content.</p>
+  </div>
+  <div class="dialog-footer">
+    <button mat-button (click)="cancel()">Cancel</button>
+    <button mat-raised-button color="primary" (click)="save()">Save</button>
+  </div>
+</div>
